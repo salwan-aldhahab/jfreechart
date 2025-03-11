@@ -83,6 +83,32 @@
     <build>
         <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
+        
+	        <plugin>
+	            <groupId>org.pitest</groupId>
+	            <artifactId>pitest-maven</artifactId>
+	            <version>1.18.2</version>
+	            <dependencies>
+	                <dependency>
+	                    <groupId>org.pitest</groupId>
+	                    <artifactId>pitest-junit5-plugin</artifactId>
+	                    <version>1.2.2</version>
+	                </dependency>
+	            </dependencies>
+	            <configuration>
+	                <!-- Target the production classes (all classes in org.jfree) -->
+	                <targetClasses>
+	                    <param>org.jfree.chart.*</param>
+	                </targetClasses>
+	                <!-- Target only test classes, e.g., those ending with Test -->
+	                <targetTests>
+	                    <param>org.jfree.chart.AreaChartTest</param>
+	                </targetTests>
+	                <!-- Explicitly instruct PIT to use JUnit 5 -->
+	                <junit5Plugin>true</junit5Plugin>
+	            </configuration>
+	        </plugin>
+        
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
