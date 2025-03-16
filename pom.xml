@@ -98,11 +98,39 @@
 	            <configuration>
 	                <!-- Target the production classes (all classes in org.jfree) -->
 	                <targetClasses>
-	                    <param>org.jfree.chart.*</param>
+	                    <!-- <param>org.jfree.chart.*</param> -->
+	                    <param>org.jfree.chart.api.RectangleAlignment</param>
+						
+						<param>org.jfree.chart.swing.ChartPanel</param>
+						<param>org.jfree.chart.swing.CrosshairOverlay</param>
+						
+						<param>org.jfree.chart.block.BlockBorder</param>
+						<param>org.jfree.chart.block.BlockContainer</param>
+						<param>org.jfree.chart.block.LineBorder</param>
+						
+						<param>org.jfree.chart.axis.TickUnits</param>
+						
+						<param>org.jfree.chart.plot.SpiderWebPlot</param>
+						<param>org.jfree.chart.plot.PolarPlot</param>
+						<param>org.jfree.chart.plot.FastScatterPlot</param>
 	                </targetClasses>
 	                <!-- Target only test classes, e.g., those ending with Test -->
 	                <targetTests>
-	                    <param>org.jfree.chart.AreaChartTest</param>
+	                    <!-- <param>org.jfree.chart.AreaChartTest</param> -->
+	                    <param>org.jfree.chart.api.RectangleAlignmentTest</param>
+						
+						<param>org.jfree.chart.swing.ChartPanelTest</param>
+						<param>org.jfree.chart.swing.CrosshairOverlayTest</param>
+						
+						<param>org.jfree.chart.block.BlockBorderTest</param>
+						<param>org.jfree.chart.block.BlockContainerTest</param>
+						<param>org.jfree.chart.block.LineBorderTest</param>
+						
+						<param>org.jfree.chart.axis.TickUnitsTest</param>
+						
+						<param>org.jfree.chart.plot.SpiderWebPlotTest</param>
+						<param>org.jfree.chart.plot.PolarPlotTest</param>
+						<param>org.jfree.chart.plot.FastScatterPlotTest</param>
 	                </targetTests>
 	                <!-- Explicitly instruct PIT to use JUnit 5 -->
 	                <junit5Plugin>true</junit5Plugin>
